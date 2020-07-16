@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C849F00D-A899-40BD-8F7D-71C365BE00E6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Detyra___EPacient</RootNamespace>
+    <AssemblyName>Detyra - EPacient</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.13.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config\DB.cs" />
+    <Compile Include="Constants\DateTimeFormats.cs" />
+    <Compile Include="Constants\DBTables.cs" />
+    <Compile Include="Constants\ChartDocTypes.cs" />
+    <Compile Include="Constants\Genders.cs" />
+    <Compile Include="Constants\Months.cs" />
+    <Compile Include="Constants\Roles.cs" />
+    <Compile Include="Constants\Dimensions.cs" />
+    <Compile Include="Constants\Statuses.cs" />
+    <Compile Include="Constants\WeekDays.cs" />
+    <Compile Include="Controllers\Doctor\DoctorMainController.cs" />
+    <Compile Include="Controllers\Doctor\DoctorTimetablesController.cs" />
+    <Compile Include="Controllers\Doctor\DoctorReservationsController.cs" />
+    <Compile Include="Controllers\Doctor\DoctorPrescriptionsController.cs" />
+    <Compile Include="Controllers\LogInController.cs" />
+    <Compile Include="Controllers\Manager\ManagerMainController.cs" />
+    <Compile Include="Controllers\Manager\MedicamentsController.cs" />
+    <Compile Include="Controllers\Manager\AnalyticsController.cs" />
+    <Compile Include="Controllers\Manager\ServicesController.cs" />
+    <Compile Include="Controllers\Manager\EmergencyDoctorsController.cs" />
+    <Compile Include="Controllers\Manager\TimetablesController.cs" />
+    <Compile Include="Controllers\Manager\UsersController.cs" />
+    <Compile Include="Controllers\Nurse\NurseAnalysisController.cs" />
+    <Compile Include="Controllers\Nurse\NurseReservationsController.cs" />
+    <Compile Include="Controllers\Nurse\NurseScheduleController.cs" />
+    <Compile Include="Controllers\Nurse\NurseMainController.cs" />
+    <Compile Include="Controllers\Operator\OperatorMainController.cs" />
+    <Compile Include="Controllers\Operator\PatientChartsController.cs" />
+    <Compile Include="Controllers\Operator\ReservationsController.cs" />
+    <Compile Include="Controllers\Operator\PatientsController.cs" />
+    <Compile Include="Controllers\Operator\OperatorTimetablesController.cs" />
+    <Compile Include="Helpers\Panels.cs" />
+    <Compile Include="Helpers\PasswordHash.cs" />
+    <Compile Include="Helpers\Validators.cs" />
+    <Compile Include="Models\EmergencyDoctor.cs" />
+    <Compile Include="Models\Allergen.cs" />
+    <Compile Include="Models\PrescriptionMedicament.cs" />
+    <Compile Include="Models\Prescription.cs" />
+    <Compile Include="Models\Month.cs" />
+    <Compile Include="Models\Medicament.cs" />
+    <Compile Include="Models\Patient.cs" />
+    <Compile Include="Models\ChartDocument.cs" />
+    <Compile Include="Models\Reservation.cs" />
+    <Compile Include="Models\ReservationAnalytics.cs" />
+    <Compile Include="Models\Sector.cs" />
+    <Compile Include="Models\Service.cs" />
+    <Compile Include="Models\Nurse.cs" />
+    <Compile Include="Models\Doctor.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Operator.cs" />
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\PatientChart.cs" />
+    <Compile Include="Models\Status.cs" />
+    <Compile Include="Models\WorkingHours.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Styles\Colors.cs" />
+    <Compile Include="Styles\Fonts.cs" />
+    <Compile Include="Views\Common\StaticComboBox.cs" />
+    <Compile Include="Views\Common\DynamicComboBox.cs" />
+    <Compile Include="Views\Doctor\Prescriptions\Prescription.cs" />
+    <Compile Include="Views\Doctor\Prescriptions\ReservationsTable.cs" />
+    <Compile Include="Views\Doctor\Reservations\ReservationsDoc.cs" />
+    <Compile Include="Views\Doctor\Reservations\ReservationsTable.cs" />
+    <Compile Include="Views\Doctor\TimeTables\TimeTablesDoc.cs" />
+    <Compile Include="Views\Manager\Analytics\DoctorReservationsTable.cs" />
+    <Compile Include="Views\Manager\Analytics\Card.cs" />
+    <Compile Include="Views\Manager\DoctorInCharge\EmergencyDoctorsTable.cs" />
+    <Compile Include="Views\Manager\Medicaments\DynamicMedicamentsTable.cs" />
+    <Compile Include="Views\Manager\Services\DynamicServicesTable.cs" />
+    <Compile Include="Views\Manager\Timetables\DynamicEmployeesTable.cs" />
+    <Compile Include="Views\Manager\Users\DynamicUsersTable.cs" />
+    <Compile Include="Views\Common\NavigationBar.cs" />
+    <Compile Include="Views\Doctor\DoctorMainPanel.cs" />
+    <Compile Include="Views\Manager\ManagerMainPanel.cs" />
+    <Compile Include="Views\Manager\Medicaments\Medicaments.cs" />
+    <Compile Include="Views\Manager\Analytics\Analytics.cs" />
+    <Compile Include="Views\Manager\Timetables\Timetables.cs" />
+    <Compile Include="Views\Manager\DoctorInCharge\DoctorInCharge.cs" />
+    <Compile Include="Views\Manager\Services\Services.cs" />
+    <Compile Include="Views\Manager\Users\Users.cs" />
+    <Compile Include="Views\Nurse\Analysis\AddAnalysisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Nurse\Analysis\AddAnalysisForm.Designer.cs">
+      <DependentUpon>AddAnalysisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Nurse\Analysis\AnalysisTable.cs" />
+    <Compile Include="Views\Nurse\Analysis\PatientsTable.cs" />
+    <Compile Include="Views\Nurse\NurseMainPanel.cs" />
+    <Compile Include="Views\Nurse\Analysis\Analysis.cs" />
+    <Compile Include="Views\Nurse\ReservationsNurse\ReservationsNurse.cs" />
+    <Compile Include="Views\Nurse\ReservationsNurse\ReservationsTableNurse.cs" />
+    <Compile Include="Views\Nurse\ScheduleNurse\Schedule.cs" />
+    <Compile Include="Views\Operator\PatientCharts\AddAllergensForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Operator\PatientCharts\AddAllergensForm.Designer.cs">
+      <DependentUpon>AddAllergensForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Operator\PatientCharts\AllergensTable.cs" />
+    <Compile Include="Views\Operator\PatientCharts\DocsTable.cs" />
+    <Compile Include="Views\Operator\PatientCharts\AddDocsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Operator\PatientCharts\AddDocsForm.Designer.cs">
+      <DependentUpon>AddDocsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Operator\PatientCharts\PatientsTable.cs" />
+    <Compile Include="Views\Operator\PatientCharts\PatientCharts.cs" />
+    <Compile Include="Views\Operator\Patients\DynamicPatientsTable.cs" />
+    <Compile Include="Views\Operator\Patients\Patients.cs" />
+    <Compile Include="Views\Operator\Reservations\ReservationsTable.cs" />
+    <Compile Include="Views\Operator\Timetables\OperatorEmployeesTable.cs" />
+    <Compile Include="Views\Operator\Timetables\TimeTables.cs" />
+    <Compile Include="Views\Operator\Reservations\Reservations.cs" />
+    <Compile Include="Views\Operator\OperatorMainPanel.cs" />
+    <Compile Include="Views\LogInPanel.cs" />
+    <Compile Include="Views\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Views\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\Nurse\Analysis\AddAnalysisForm.resx">
+      <DependentUpon>AddAnalysisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Operator\PatientCharts\AddAllergensForm.resx">
+      <DependentUpon>AddAllergensForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Operator\PatientCharts\AddDocsForm.resx">
+      <DependentUpon>AddDocsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\assignment.png" />
+    <Content Include="Resources\back.png" />
+    <Content Include="Resources\calendar.png" />
+    <Content Include="Resources\clock.png" />
+    <Content Include="Resources\description.png" />
+    <Content Include="Resources\hospital.png" />
+    <Content Include="Resources\log-out.png" />
+    <Content Include="Resources\manager.png" />
+    <Content Include="Resources\nurse.png" />
+    <Content Include="Resources\operator.png" />
+    <Content Include="Resources\patient-favicon.ico" />
+    <Content Include="Resources\patient-favicon.png" />
+    <Content Include="Resources\pie-chart.png" />
+    <Content Include="Resources\surgeon.png" />
+    <Content Include="Resources\user.png" />
+    <Content Include="Resources\users.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
